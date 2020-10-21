@@ -21,5 +21,9 @@ namespace Quizzes
         public abstract void DisplayAnswerChoices();
 
         public abstract void DisplayCorrectAnswers();
+
+        public abstract void DisplayPromptForAnswer();
+
+        public abstract void CheckAnswers(string userAnswer);
     }
 }

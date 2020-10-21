@@ -26,6 +26,11 @@ namespace Quizzes
 
         public void ShowAllQuestionsAndAnswers()
         {
+
+        }
+
+        public void ShowAllQuestionsAndCorrectAnswers()
+        {
             Console.WriteLine(ASTERISK_LINE + "\nQuestions & Correct Answers\n" + ASTERISK_LINE + "\n");
             for (int i = 0; i < Questions.Count; i++)
             {
@@ -53,5 +58,5 @@ namespace Quizzes
                 Console.WriteLine("\n" + ASTERISK_LINE);
             }
         }
-    }
-}
+    } // class
+} // namespace

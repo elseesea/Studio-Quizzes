@@ -11,3 +11,16 @@ D:\Users\jamielihyahoo\development\LaunchCode\Quizzes\Quizzes\obj\Debug\netcorea
 D:\Users\jamielihyahoo\development\LaunchCode\Quizzes\Quizzes\obj\Debug\netcoreapp3.1\Quizzes.dll
 D:\Users\jamielihyahoo\development\LaunchCode\Quizzes\Quizzes\obj\Debug\netcoreapp3.1\Quizzes.pdb
 D:\Users\jamielihyahoo\development\LaunchCode\Quizzes\Quizzes\obj\Debug\netcoreapp3.1\Quizzes.genruntimeconfig.cache
+C:\Users\jamielih\Documents\Software Development\Studio-Quizzes\Quizzes\bin\Debug\netcoreapp3.1\Quizzes.exe
+C:\Users\jamielih\Documents\Software Development\Studio-Quizzes\Quizzes\bin\Debug\netcoreapp3.1\Quizzes.deps.json
+C:\Users\jamielih\Documents\Software Development\Studio-Quizzes\Quizzes\bin\Debug\netcoreapp3.1\Quizzes.runtimeconfig.json
+C:\Users\jamielih\Documents\Software Development\Studio-Quizzes\Quizzes\bin\Debug\netcoreapp3.1\Quizzes.runtimeconfig.dev.json
+C:\Users\jamielih\Documents\Software Development\Studio-Quizzes\Quizzes\bin\Debug\netcoreapp3.1\Quizzes.dll
+C:\Users\jamielih\Documents\Software Development\Studio-Quizzes\Quizzes\bin\Debug\netcoreapp3.1\Quizzes.pdb
+C:\Users\jamielih\Documents\Software Development\Studio-Quizzes\Quizzes\obj\Debug\netcoreapp3.1\Quizzes.csprojAssemblyReference.cache
+C:\Users\jamielih\Documents\Software Development\Studio-Quizzes\Quizzes\obj\Debug\netcoreapp3.1\Quizzes.AssemblyInfoInputs.cache
+C:\Users\jamielih\Documents\Software Development\Studio-Quizzes\Quizzes\obj\Debug\netcoreapp3.1\Quizzes.AssemblyInfo.cs
+C:\Users\jamielih\Documents\Software Development\Studio-Quizzes\Quizzes\obj\Debug\netcoreapp3.1\Quizzes.csproj.CoreCompileInputs.cache
+C:\Users\jamielih\Documents\Software Development\Studio-Quizzes\Quizzes\obj\Debug\netcoreapp3.1\Quizzes.dll
+C:\Users\jamielih\Documents\Software Development\Studio-Quizzes\Quizzes\obj\Debug\netcoreapp3.1\Quizzes.pdb
+C:\Users\jamielih\Documents\Software Development\Studio-Quizzes\Quizzes\obj\Debug\netcoreapp3.1\Quizzes.genruntimeconfig.cache

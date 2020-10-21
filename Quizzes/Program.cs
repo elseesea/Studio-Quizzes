@@ -5,32 +5,48 @@ namespace Quizzes
 {
     class Program
     {
-        static void Main(string[] args)
+        private static void CreateAndAddQuestions(Quiz quiz)
         {
-            Quiz quiz = new Quiz();
+            // Create a multiple-choice question object
+            Question q1 = new MultipleChoiceQuestion("Which language is not a strongly typed language?",
+                new Dictionary<int, string>() {
+                    {1, "Java" },
+                    {2, "Javascript" },
+                    {3, "C#" },
+                    {4, "None of the above" }
+                },
+                2);
 
-            Question q1 = new MultipleChoiceQuestion("Which language is not a strongly typed language?");
-            (q1 as MultipleChoiceQuestion).AddChoice(1, "Java");
-            (q1 as MultipleChoiceQuestion).AddChoice(2, "JavaScript");
-            (q1 as MultipleChoiceQuestion).AddChoice(3, "C#");
-            (q1 as MultipleChoiceQuestion).AddChoice(4, "None of the above");
-            (q1 as MultipleChoiceQuestion).CorrectAnswer = 2;
+            // Create a checkbox question object
+            Question q2 = new CheckBoxQuestion("Select the planets:",
+                new Dictionary<int, KeyValuePair<bool, string>>() {
+                    {1, new KeyValuePair<bool, string>(true, "Earth") },
+                    {2, new KeyValuePair<bool, string>(false, "Helios") },
+                    {3, new KeyValuePair<bool, string>(false, "Titan") },
+                    {4, new KeyValuePair<bool, string>(false, "Zeus") },
+                    {5, new KeyValuePair<bool, string>(true, "Mars") },
+                    {6, new KeyValuePair<bool, string>(true, "Jupiter") }
+                }
+            );
 
-            Question q2 = new CheckBoxQuestion("Select the planets:");
-            (q2 as CheckBoxQuestion).AddChoice(true, "Earth");
-            (q2 as CheckBoxQuestion).AddChoice(false, "Helios");
-            (q2 as CheckBoxQuestion).AddChoice(false, "Titan");
-            (q2 as CheckBoxQuestion).AddChoice(false, "Zeus");
-            (q2 as CheckBoxQuestion).AddChoice(true, "Mars");
-            (q2 as CheckBoxQuestion).AddChoice(true, "Jupiter");
-
+            // Create a truefalse question object
             Question q3 = new TrueFalseQuestion("LaunchCode is awesome", true);
 
+            // Add the question objects to the quiz
             quiz.AddQuestion(q1);
             quiz.AddQuestion(q2);
             quiz.AddQuestion(q3);
+        }
 
-            //quiz.ShowAllQuestionsAndAnswers();
+        static void Main(string[] args)
+        {
+            // Create a new quiz
+            Quiz quiz = new Quiz();
+
+            CreateAndAddQuestions(quiz);
+            
+            // Display all questions, answer choices, & correct answers
+            //quiz.ShowAllQuestionsAndCorrectAnswers();
 
             Console.WriteLine("\nA Quiz For You");
             for (int i = 0; i < quiz.Questions.Count; i++)
@@ -39,26 +55,11 @@ namespace Quizzes
                 Question q = quiz.Questions[i];
                 q.DisplayQuestion();
                 Console.WriteLine();
-                if (q is MultipleChoiceQuestion)
-                {
-                    q.DisplayAnswerChoices();
-                    Console.WriteLine();
-                    //q.DisplayCorrectAnswers();
-                }
-                if (q is CheckBoxQuestion)
-                {
-                    q.DisplayAnswerChoices();
-                    //q.DisplayCorrectAnswers();
-                    Console.WriteLine();
-                }
-                if (q is TrueFalseQuestion)
-                {
-                    q.DisplayAnswerChoices();
-                    Console.WriteLine();
-                    //q.DisplayCorrectAnswers();
-                }
-                Console.Write("Your answer: ");
+                q.DisplayAnswerChoices();
+                Console.WriteLine();
+                q.DisplayPromptForAnswer();
                 string userInput = Console.ReadLine();
+                q.CheckAnswers(userInput);
                 Console.WriteLine();
             }
 

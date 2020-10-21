@@ -85,5 +85,24 @@ namespace Quizzes
         {
             Console.WriteLine("Correct answer is choice : " + CorrectAnswer);
         }
+
+        public override void DisplayPromptForAnswer()
+        {
+            Console.WriteLine("Your answer (type a number, then <Enter>): ");
+        }
+
+        public override void CheckAnswers(string userAnswer)
+        {
+            int userAnswerInt = int.Parse(userAnswer);
+            if (userAnswerInt == CorrectAnswer)
+            {
+                Console.Write("You are correct. It is choice # ");
+            }
+            else
+            {
+                Console.Write("Sorry, you are incorrect. The correct choice is # ");
+            }
+            Console.WriteLine(CorrectAnswer + ".");
+        }
     }
 }
