@@ -8,7 +8,7 @@ namespace Quizzes
 {
     class MultipleChoiceQuestion : Question
     {
-        public Dictionary<int, string> AnswerChoices { get; set; }// = new Dictionary<int, string> { };
+        public Dictionary<int, string> AnswerChoices { get; set; }
         public int CorrectAnswer { get; set; }
 
 

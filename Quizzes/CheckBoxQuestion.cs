@@ -6,7 +6,7 @@ namespace Quizzes
 {
     class CheckBoxQuestion : Question
     {
-        List<KeyValuePair<bool, string>> Answers { get; set; } = new List<KeyValuePair<bool, string>> { };
+        public List<KeyValuePair<bool, string>> Answers { get; set; } = new List<KeyValuePair<bool, string>> { };
 
         public CheckBoxQuestion(string questionText) : base(questionText)
         {

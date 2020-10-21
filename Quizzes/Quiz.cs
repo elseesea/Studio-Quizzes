@@ -6,7 +6,8 @@ namespace Quizzes
 {
     class Quiz
     {
-        List<Question> Questions { get; set; }// = new List<Question> { };
+        private const string ASTERISK_LINE = "******************************************";
+        public List<Question> Questions { get; set; }// = new List<Question> { };
 
         public Quiz()
         {
@@ -25,10 +26,10 @@ namespace Quizzes
 
         public void ShowAllQuestionsAndAnswers()
         {
+            Console.WriteLine(ASTERISK_LINE + "\nQuestions & Correct Answers\n" + ASTERISK_LINE + "\n");
             for (int i = 0; i < Questions.Count; i++)
             {
-                Console.WriteLine("Questions & Correct Answers");
-                Console.Write("*************************\nQuestion " + (i + 1) + " - ");
+                Console.Write("\nQuestion " + (i + 1) + " - ");
                 Question q = Questions[i];
                 q.DisplayQuestion();
                 Console.WriteLine();
@@ -49,7 +50,7 @@ namespace Quizzes
                     Console.WriteLine();
                     q.DisplayCorrectAnswers();
                 }
-                Console.WriteLine();
+                Console.WriteLine("\n" + ASTERISK_LINE);
             }
         }
     }
