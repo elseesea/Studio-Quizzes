@@ -73,6 +73,11 @@ namespace Quizzes
             return "Failed to set correct answer: Choice # " + correctChoice + " NOT FOUND";
         }
 
+        public override void PresentQuestion()
+        {
+            throw new NotImplementedException();
+        }
+
         public override void DisplayAnswerChoices()
         {
             Console.WriteLine();

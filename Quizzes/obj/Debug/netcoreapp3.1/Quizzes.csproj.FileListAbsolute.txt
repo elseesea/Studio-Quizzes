@@ -24,3 +24,16 @@ C:\Users\jamielih\Documents\Software Development\Studio-Quizzes\Quizzes\obj\Debu
 C:\Users\jamielih\Documents\Software Development\Studio-Quizzes\Quizzes\obj\Debug\netcoreapp3.1\Quizzes.dll
 C:\Users\jamielih\Documents\Software Development\Studio-Quizzes\Quizzes\obj\Debug\netcoreapp3.1\Quizzes.pdb
 C:\Users\jamielih\Documents\Software Development\Studio-Quizzes\Quizzes\obj\Debug\netcoreapp3.1\Quizzes.genruntimeconfig.cache
+D:\Users\jamielihyahoo\development\LaunchCode\Studio-Quizzes\Quizzes\obj\Debug\netcoreapp3.1\Quizzes.csprojAssemblyReference.cache
+D:\Users\jamielihyahoo\development\LaunchCode\Studio-Quizzes\Quizzes\obj\Debug\netcoreapp3.1\Quizzes.AssemblyInfoInputs.cache
+D:\Users\jamielihyahoo\development\LaunchCode\Studio-Quizzes\Quizzes\obj\Debug\netcoreapp3.1\Quizzes.AssemblyInfo.cs
+D:\Users\jamielihyahoo\development\LaunchCode\Studio-Quizzes\Quizzes\obj\Debug\netcoreapp3.1\Quizzes.csproj.CoreCompileInputs.cache
+D:\Users\jamielihyahoo\development\LaunchCode\Studio-Quizzes\Quizzes\obj\Debug\netcoreapp3.1\Quizzes.dll
+D:\Users\jamielihyahoo\development\LaunchCode\Studio-Quizzes\Quizzes\obj\Debug\netcoreapp3.1\Quizzes.pdb
+D:\Users\jamielihyahoo\development\LaunchCode\Studio-Quizzes\Quizzes\bin\Debug\netcoreapp3.1\Quizzes.exe
+D:\Users\jamielihyahoo\development\LaunchCode\Studio-Quizzes\Quizzes\bin\Debug\netcoreapp3.1\Quizzes.deps.json
+D:\Users\jamielihyahoo\development\LaunchCode\Studio-Quizzes\Quizzes\bin\Debug\netcoreapp3.1\Quizzes.runtimeconfig.json
+D:\Users\jamielihyahoo\development\LaunchCode\Studio-Quizzes\Quizzes\bin\Debug\netcoreapp3.1\Quizzes.runtimeconfig.dev.json
+D:\Users\jamielihyahoo\development\LaunchCode\Studio-Quizzes\Quizzes\bin\Debug\netcoreapp3.1\Quizzes.dll
+D:\Users\jamielihyahoo\development\LaunchCode\Studio-Quizzes\Quizzes\bin\Debug\netcoreapp3.1\Quizzes.pdb
+D:\Users\jamielihyahoo\development\LaunchCode\Studio-Quizzes\Quizzes\obj\Debug\netcoreapp3.1\Quizzes.genruntimeconfig.cache

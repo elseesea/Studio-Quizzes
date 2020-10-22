@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jamielih\\Documents\\Software Development\\Studio-Quizzes\\Quizzes\\Quizzes.csproj": {}
+    "D:\\Users\\jamielihyahoo\\development\\LaunchCode\\Studio-Quizzes\\Quizzes\\Quizzes.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jamielih\\Documents\\Software Development\\Studio-Quizzes\\Quizzes\\Quizzes.csproj": {
+    "D:\\Users\\jamielihyahoo\\development\\LaunchCode\\Studio-Quizzes\\Quizzes\\Quizzes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jamielih\\Documents\\Software Development\\Studio-Quizzes\\Quizzes\\Quizzes.csproj",
+        "projectUniqueName": "D:\\Users\\jamielihyahoo\\development\\LaunchCode\\Studio-Quizzes\\Quizzes\\Quizzes.csproj",
         "projectName": "Quizzes",
-        "projectPath": "C:\\Users\\jamielih\\Documents\\Software Development\\Studio-Quizzes\\Quizzes\\Quizzes.csproj",
-        "packagesPath": "C:\\Users\\jamielih\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jamielih\\Documents\\Software Development\\Studio-Quizzes\\Quizzes\\obj\\",
+        "projectPath": "D:\\Users\\jamielihyahoo\\development\\LaunchCode\\Studio-Quizzes\\Quizzes\\Quizzes.csproj",
+        "packagesPath": "C:\\Users\\jamielihyahoo\\.nuget\\packages\\",
+        "outputPath": "D:\\Users\\jamielihyahoo\\development\\LaunchCode\\Studio-Quizzes\\Quizzes\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jamielih\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jamielihyahoo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -52,7 +52,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

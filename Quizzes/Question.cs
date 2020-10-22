@@ -13,10 +13,12 @@ namespace Quizzes
             QuestionText = questionText;
         }
 
-        public void DisplayQuestion()
+        public virtual void DisplayQuestion()
         {
             Console.WriteLine(QuestionText);
         }
+
+        public abstract void PresentQuestion();
 
         public abstract void DisplayAnswerChoices();
 
