@@ -32,10 +32,14 @@ namespace Quizzes
             // Create a truefalse question object
             Question q3 = new TrueFalseQuestion("LaunchCode is awesome", true);
 
+            // Create a short answer question object
+            Question q4 = new ShortAnswerQuestion("What's the keyword to create an instance of an class?", "new");
+
             // Add the question objects to the quiz
             quiz.AddQuestion(q1);
             quiz.AddQuestion(q2);
             quiz.AddQuestion(q3);
+            quiz.AddQuestion(q4);
         }
 
         static void Main(string[] args)
@@ -54,7 +58,6 @@ namespace Quizzes
                 Console.Write("\nQuestion " + (i + 1) + " - ");
                 Question q = quiz.Questions[i];
                 q.DisplayQuestion();
-                Console.WriteLine();
                 q.DisplayAnswerChoices();
                 Console.WriteLine();
                 q.DisplayPromptForAnswer();

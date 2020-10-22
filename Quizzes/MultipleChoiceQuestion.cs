@@ -75,6 +75,7 @@ namespace Quizzes
 
         public override void DisplayAnswerChoices()
         {
+            Console.WriteLine();
             foreach (KeyValuePair<int, string> answer in AnswerChoices)
             {
                 Console.WriteLine(answer.Key + ". " + answer.Value);

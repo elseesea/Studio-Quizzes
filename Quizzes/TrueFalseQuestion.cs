@@ -15,6 +15,7 @@ namespace Quizzes
 
         public override void DisplayAnswerChoices()
         {
+            Console.WriteLine();
             Console.WriteLine("(T)rue or (F)alse: ");
         }
 
