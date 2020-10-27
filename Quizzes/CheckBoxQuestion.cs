@@ -67,15 +67,6 @@ namespace Quizzes
             AddChoice(answer.Key, answer.Value);
         }
 
-        public override void DisplayAnswerChoices()
-        {
-            Console.WriteLine();
-            foreach (KeyValuePair<int, KeyValuePair<bool, string>> answer in Answers)
-            {
-                Console.WriteLine(answer.Key + ". " + answer.Value.Value);
-            }            
-        }
-
         public override void DisplayCorrectAnswers()
         {
             foreach (KeyValuePair<int, string> correctAnswer in correctAnswers)
@@ -84,12 +75,7 @@ namespace Quizzes
             }
         }
 
-        public override void DisplayPromptForAnswer()
-        {
-            Console.WriteLine("Your answer (type 1 or more numbers separated by space, then <Enter>):");
-        }
-
-        public override void CheckAnswers(string userAnswer)
+        private void CheckAnswers(string userAnswer)
         {
             // Logic:
             //
@@ -140,5 +126,26 @@ namespace Quizzes
                 DisplayCorrectAnswers();
             }
         }
-    }
-}
+
+        public override void PresentQuestion()
+        {
+            DisplayQuestion();
+            
+            // Display answer choices
+            Console.WriteLine();
+            foreach (KeyValuePair<int, KeyValuePair<bool, string>> answer in Answers)
+            {
+                Console.WriteLine(answer.Key + ". " + answer.Value.Value);
+            }
+        }
+
+        public override void PromptAndCheckAnswer()
+        {
+            Console.WriteLine();
+            Console.WriteLine("Your answer (type 1 or more numbers separated by space, then <Enter>):");
+            string userInput = Console.ReadLine();
+            Console.WriteLine();
+            CheckAnswers(userInput);
+        }
+    } // class
+} // namespace

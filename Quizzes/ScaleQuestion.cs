@@ -6,33 +6,37 @@ namespace Quizzes
 {
     class ScaleQuestion : Question
     {
-        public int ScaleBegin { get; set; }
-        public int ScaleEnd { get; set; }
+        public int AnswerScaleBegin { get; set; }
+        public int AnswerScaleEnd { get; set; }
 
         public ScaleQuestion (string questionText) : base (questionText)
         {
 
         }
 
-        public ScaleQuestion (string questionText, int scaleBegin, int scaleEnd) : base (questionText)
+        public ScaleQuestion (string questionText, int answerScaleBegin, int answerScaleEnd) : base (questionText)
         {
-            ScaleBegin = scaleBegin;
-            ScaleEnd = scaleEnd;
+            AnswerScaleBegin = answerScaleBegin;
+            AnswerScaleEnd = answerScaleEnd;
         }
 
-        public override void DisplayPromptForAnswer()
+        private void CheckAnswers(string userAnswer)
         {
-            throw new NotImplementedException();
-        }
+            bool answerIsCorrect = true;
+            string[] userAnswers = userAnswer.Split(" ");
+            //int userAnswerCount = userAnswers.Length; 
+            if (userAnswers.Length != 2)
+            {
+                answerIsCorrect = false;
+            }
+            else
+                if (int.Parse(userAnswers[0]) != AnswerScaleBegin || int.Parse(userAnswers[1]) != AnswerScaleEnd)
+                    answerIsCorrect = false;
 
-        public override void DisplayAnswerChoices()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void CheckAnswers(string userAnswer)
-        {
-            throw new NotImplementedException();
+            if (answerIsCorrect)
+                Console.WriteLine("You're correct!");
+            else
+                Console.WriteLine("Sorry, the correct range is " + AnswerScaleBegin + " - " + AnswerScaleEnd + ".");
         }
 
         public override void DisplayCorrectAnswers()
@@ -40,9 +44,26 @@ namespace Quizzes
             throw new NotImplementedException();
         }
 
+/*      
         public override void DisplayQuestion()
         {
             base.DisplayQuestion();
+        }
+*/
+
+        public override void PresentQuestion()
+        {
+            base.DisplayQuestion();
+            Console.WriteLine();
+        }
+
+        public override void PromptAndCheckAnswer()
+        {
+            Console.WriteLine();
+            Console.WriteLine("Type 2 numbers, separated by space, then <Enter>");
+            string userInput = Console.ReadLine();
+            Console.WriteLine();
+            CheckAnswers(userInput);
         }
     } // class
 } // namespace

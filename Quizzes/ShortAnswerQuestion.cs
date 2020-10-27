@@ -23,12 +23,7 @@ namespace Quizzes
             Console.WriteLine(CorrectAnswer);
         }
 
-        public override void DisplayAnswerChoices()
-        {
-            ;
-        }
-
-        public override void CheckAnswers(string userAnswer)
+        private void CheckAnswers(string userAnswer)
         {
             userAnswer = userAnswer.Trim().ToLower();
             if (userAnswer.Length >= 80)
@@ -46,10 +41,18 @@ namespace Quizzes
             }
         }
 
-        public override void DisplayPromptForAnswer()
+        public override void PresentQuestion()
         {
-            Console.WriteLine("Your answer (fewer than 80 characters)");
+            DisplayQuestion();
         }
 
+        public override void PromptAndCheckAnswer()
+        {
+            Console.WriteLine();
+            Console.WriteLine("Your answer (fewer than 80 characters)");
+            string userInput = Console.ReadLine();
+            Console.WriteLine();
+            CheckAnswers(userInput);
+        }
     } // class
 } // namespace

@@ -35,11 +35,15 @@ namespace Quizzes
             // Create a short answer question object
             Question q4 = new ShortAnswerQuestion("What's the keyword to create an instance of an class?", "new");
 
+            // Create a linear range question object
+            Question q5 = new ScaleQuestion("Provide the low and high numbers (in mg/dL) of the range of blood glucose that is prediabetes (see https://www.mayoclinic.org/diseases-conditions/diabetes/diagnosis-treatment/drc-20371451).", 140, 199);
+
             // Add the question objects to the quiz
             quiz.AddQuestion(q1);
             quiz.AddQuestion(q2);
             quiz.AddQuestion(q3);
             quiz.AddQuestion(q4);
+            quiz.AddQuestion(q5);
         }
 
         static void Main(string[] args)
@@ -57,12 +61,8 @@ namespace Quizzes
             {
                 Console.Write("\nQuestion " + (i + 1) + " - ");
                 Question q = quiz.Questions[i];
-                q.DisplayQuestion();
-                q.DisplayAnswerChoices();
-                Console.WriteLine();
-                q.DisplayPromptForAnswer();
-                string userInput = Console.ReadLine();
-                q.CheckAnswers(userInput);
+                q.PresentQuestion();
+                q.PromptAndCheckAnswer();
                 Console.WriteLine();
             }
 

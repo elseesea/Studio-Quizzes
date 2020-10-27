@@ -73,12 +73,7 @@ namespace Quizzes
             return "Failed to set correct answer: Choice # " + correctChoice + " NOT FOUND";
         }
 
-        public override void PresentQuestion()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void DisplayAnswerChoices()
+        public void DisplayAnswerChoices()
         {
             Console.WriteLine();
             foreach (KeyValuePair<int, string> answer in AnswerChoices)
@@ -87,19 +82,21 @@ namespace Quizzes
             }
         }
 
-        public override void DisplayCorrectAnswers()
+        public override void PresentQuestion()
         {
-            Console.WriteLine("Correct answer is choice : " + CorrectAnswer);
+            DisplayQuestion();
+            DisplayAnswerChoices();
         }
 
-        public override void DisplayPromptForAnswer()
+        public override void PromptAndCheckAnswer()
         {
+            Console.WriteLine();
             Console.WriteLine("Your answer (type a number, then <Enter>): ");
-        }
-
-        public override void CheckAnswers(string userAnswer)
-        {
-            int userAnswerInt = int.Parse(userAnswer);
+            string userInput = Console.ReadLine();
+            Console.WriteLine();
+            
+            // Check answer
+            int userAnswerInt = int.Parse(userInput);
             if (userAnswerInt == CorrectAnswer)
             {
                 Console.Write("You are correct. It is choice # ");
@@ -109,6 +106,11 @@ namespace Quizzes
                 Console.Write("Sorry, you are incorrect. The correct choice is # ");
             }
             Console.WriteLine(CorrectAnswer + ".");
+        }
+
+        public override void DisplayCorrectAnswers()
+        {
+            Console.WriteLine("Correct answer is choice : " + CorrectAnswer);
         }
     }
 }

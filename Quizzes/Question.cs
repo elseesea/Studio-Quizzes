@@ -13,19 +13,21 @@ namespace Quizzes
             QuestionText = questionText;
         }
 
-        public virtual void DisplayQuestion()
+       public virtual void DisplayQuestion()
         {
             Console.WriteLine(QuestionText);
         }
 
         public abstract void PresentQuestion();
 
-        public abstract void DisplayAnswerChoices();
+        public abstract void PromptAndCheckAnswer();
+
+//        public abstract void DisplayAnswerChoices();
 
         public abstract void DisplayCorrectAnswers();
 
-        public abstract void DisplayPromptForAnswer();
+//        public abstract void DisplayPromptForAnswer();
 
-        public abstract void CheckAnswers(string userAnswer);
+//        public abstract void CheckAnswers(string userAnswer);
     }
 }

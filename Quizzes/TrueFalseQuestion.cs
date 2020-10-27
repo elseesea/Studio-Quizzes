@@ -13,23 +13,12 @@ namespace Quizzes
             Answer = answer;
         }
 
-        public override void DisplayAnswerChoices()
-        {
-            Console.WriteLine();
-            Console.WriteLine("(T)rue or (F)alse: ");
-        }
-
         public override void DisplayCorrectAnswers()
         {
             Console.WriteLine("Answer: " + Answer);
         }
 
-        public override void DisplayPromptForAnswer()
-        {
-            Console.WriteLine("Your answer:");
-        }
-
-        public override void CheckAnswers(string userAnswer)
+        private void CheckAnswers(string userAnswer)
         {
             userAnswer = userAnswer.Trim().ToLower();
             string allcapsAnswer = Answer.ToString().ToUpper();
@@ -45,5 +34,26 @@ namespace Quizzes
             }
             Console.WriteLine(allcapsAnswer + ".");
         }
-    }
-}
+
+        public void DisplayAnswerChoices()
+        {
+            Console.WriteLine();
+            Console.WriteLine("(T)rue or (F)alse: ");
+        }
+
+        public override void PresentQuestion()
+        {
+            DisplayQuestion();
+            DisplayAnswerChoices();
+        }
+
+        public override void PromptAndCheckAnswer()
+        {
+            Console.WriteLine();
+            Console.WriteLine("Your answer:");
+            string userInput = Console.ReadLine();
+            //Console.WriteLine();
+            CheckAnswers(userInput);
+        }
+    } // class
+} // namespace

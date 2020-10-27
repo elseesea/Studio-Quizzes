@@ -40,7 +40,7 @@ namespace Quizzes
                 Console.WriteLine();
                 if (q is MultipleChoiceQuestion)
                 {
-                    q.DisplayAnswerChoices();
+                    (q as MultipleChoiceQuestion).DisplayAnswerChoices();
                     Console.WriteLine();
                     q.DisplayCorrectAnswers();
                 }
@@ -51,8 +51,16 @@ namespace Quizzes
                 }
                 if (q is TrueFalseQuestion)
                 {
-                    q.DisplayAnswerChoices();
+                    (q as TrueFalseQuestion).DisplayAnswerChoices();
                     Console.WriteLine();
+                    q.DisplayCorrectAnswers();
+                }
+                if (q is ShortAnswerQuestion)
+                {
+                    q.DisplayCorrectAnswers();
+                }
+                if (q is ScaleQuestion)
+                {
                     q.DisplayCorrectAnswers();
                 }
                 Console.WriteLine("\n" + ASTERISK_LINE);
